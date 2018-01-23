@@ -15,8 +15,13 @@ public:
     explicit Dialog(QWidget *parent = 0);
     ~Dialog();
 
+public Q_SLOTS:
+    void showText();
+
 private:
     Ui::Dialog *ui;
+
+    bool m_bFlag;
 };
 
 #endif // DIALOG_H

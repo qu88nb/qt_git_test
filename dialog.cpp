@@ -8,7 +8,7 @@ Dialog::Dialog(QWidget *parent) :
 {
     ui->setupUi(this);
     m_bFlag = false;
-    ui->pushButton->setText("show");
+    ui->pushButton->setText("Show");
     connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(showText()));
 }
 
@@ -21,14 +21,14 @@ void Dialog::showText()
 {
     if (m_bFlag)
     {
-        ui->pushButton->setText("show");
+        ui->pushButton->setText("Show");
         ui->textEdit->clear();
-        QMessageBox::information(this, "Info", "clear text info ok!");
+        QMessageBox::information(this, "Info", "Clear text info ok!");
     }
     else
     {
-        ui->pushButton->setText("clear");
-        ui->textEdit->setText("hi qu88nb, welcome to qt github!");
+        ui->pushButton->setText("Clear");
+        ui->textEdit->setText("Hi qu88nb, Welcome to qt github!");
     }
 
     m_bFlag = !m_bFlag;
